@@ -17,9 +17,25 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p> 
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
+    <div name="nome">Novo texto</div>
+    <div class="tclasse">TEstando classes</div>
     <script>
-        
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[0];
+        p1.style.color = 'red';
+        window.document.write(p1.innerText);
+        corpo.style.backgroundColor = 'gray';
+        var d = window.document.getElementById('msg');
+        d.style.color = 'blue';
+        d.innerText = 'Vamos lá ...';
+        var n = window.document.getElementsByName('nome')[0];
+        n.innerText = 'É assim sim.';
+        var c = window.document.getElementsByClassName('tclasse')[0];
+        c.innerText = '...';
+        var qs = window.document.querySelector('div#msg');
+        var qs1 = window.document.querySelector('div.tclasse');
+        qs1.style.color = 'orange'
     </script>
 </body>
 </html>
